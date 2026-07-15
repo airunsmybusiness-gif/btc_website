@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTC Auto Service • Better Rates. Honest Work. Local Expertise.</title>
+    <meta name="description" content="Better Rates. Honest Work. Local Expertise. Expert tires, brakes, oil changes, tune-ups and mechanical repairs in Kindersley.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@700&amp;display=swap');
+        
+        body { font-family: 'Inter', system_ui, sans-serif; background: #0A0F1C; color: #E2E8F0; }
+        .display-font { font-family: 'Space Grotesk', system_ui, sans-serif; font-weight: 700; letter-spacing: -0.035em; }
+        
+        .hero-auto {
+            background: linear-gradient(rgba(10,15,28,0.88), rgba(10,15,28,0.75));
+            background-size: cover;
+            background-position: center 30%;
+        }
+        
+        .nav-scrolled { background: rgba(10,15,28,0.95); backdrop-filter: blur(20px); }
+        
+        .main-cta {
+            background: #A3E635;
+            color: #0A0F1C;
+            font-weight: 900;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+            transition: all 0.2s ease;
+        }
+        
+        .main-cta:hover {
+            background: #BEF264;
+            transform: translateY(-2px);
+        }
+        
+        .service-card {
+            background: #111827;
+            border: 1px solid #1F2937;
+            transition: transform 0.5s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+        
+        .moving-icon {
+            transition: transform 0.7s cubic-bezier(0.34,1.56,0.64,1);
+        }
+        
+        .service-card:hover .moving-icon {
+            transform: scale(1.25) rotate(10deg);
+        }
+        
+        .section-title {
+            font-size: 3.4rem;
+            line-height: 0.92;
+            letter-spacing: -0.045em;
+        }
+        
+        .logo-hype {
+            transition: transform 0.5s cubic-bezier(0.34,1.56,0.64,1);
+        }
+        
+        .logo-hype:hover {
+            transform: scale(1.1);
+        }
+        
+        .accent-green { color: #A3E635; }
+    </style>
+</head>
+<body>
+    <!-- Nav -->
+    <nav id="nav" class="sticky top-0 z-50 border-b border-white/10 transition-all">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-x-4">
+                    <div onclick="window.scrollTo({top:0, behavior:'smooth'})" class="logo-hype w-14 h-14 bg-black rounded-3xl flex items-center justify-center shadow-xl border border-white/10 cursor-pointer">
+                        <span class="text-white font-black text-[32px] tracking-[-3px]">BTC</span>
+                    </div>
+                    <div>
+                        <div class="font-black text-2xl tracking-[-1px] text-white">BTC Auto Service</div>
+                        <div class="text-[10px] accent-green -mt-1 tracking-[2.5px] font-black">BETTER RATES • HONEST WORK • LOCAL</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-bold text-white/80">
+                    <a href="#services" class="hover:text-white transition">Services</a>
+                    <a href="#why" class="hover:text-white transition">Why BTC</a>
+                    <a href="#work" class="hover:text-white transition">Our Shop</a>
+                </div>
+                
+                <div class="flex items-center gap-x-3">
+                    <a href="tel:3068607646" class="px-6 py-3 border border-white/20 hover:border-white/40 rounded-2xl text-sm font-bold flex items-center gap-x-2 transition text-white">
+                        <i class="fa-solid fa-phone accent-green"></i>
+                        <span>Call Us</span>
+                    </a>
+                    <a href="#quote" class="main-cta px-8 py-3.5 text-[#0A0F1C] text-sm font-black rounded-3xl flex items-center gap-x-2">
+                        BOOK SERVICE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero with New Headline -->
+    <section class="hero-auto min-h-[100dvh] flex items-center text-white">
+        <div class="max-w-5xl mx-auto px-8 pt-16 pb-20">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-x-2 px-6 py-2 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl mb-8 text-sm font-bold">
+                    KINDERSLEY, SASKATCHEWAN
+                </div>
+                
+                <h1 class="text-[64px] md:text-[78px] leading-[0.9] font-black tracking-[-4.2px] mb-6 text-white">
+                    BETTER RATES.<br>
+                    HONEST WORK.<br>
+                    <span class="accent-green">LOCAL EXPERTISE.</span>
+                </h1>
+                
+                <p class="max-w-md text-2xl text-white/80 mb-10 tracking-tight">
+                    Tires • Brakes • Oil Changes • Tune-Ups • Full Mechanical Repairs
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#quote" class="main-cta inline-flex items-center justify-center gap-x-3 px-10 py-5 font-black text-2xl rounded-3xl transition-all">
+                        BOOK SERVICE NOW
+                    </a>
+                    <a href="tel:3068607646" class="inline-flex items-center justify-center gap-x-3 px-9 py-5 border-2 border-white/40 hover:bg-white/10 rounded-3xl text-xl font-bold transition-all text-white">
+                        CALL (306) 860-7646
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust -->
+    <div class="bg-[#111827] border-b border-white/10 py-5">
+        <div class="max-w-6xl mx-auto px-8 flex flex-wrap justify-center md:justify-between items-center gap-x-8 text-sm font-bold text-white/70">
+            <div><i class="fa-solid fa-check accent-green mr-2"></i> Better rates than the big chains</div>
+            <div><i class="fa-solid fa-check accent-green mr-2"></i> Same-day service often available</div>
+            <div><i class="fa-solid fa-check accent-green mr-2"></i> Local. Honest. Reliable.</div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <section id="services" class="max-w-7xl mx-auto px-8 py-20">
+        <div class="text-center mb-12">
+            <div class="accent-green text-xs font-black tracking-[4px]">EXPERT AUTO CARE</div>
+            <h2 class="section-title font-black tracking-tight text-white">Services that keep you moving</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="service-card p-8 rounded-3xl group">
+                <div class="moving-icon accent-green text-4xl mb-5"><i class="fa-solid fa-tachometer-alt"></i></div>
+                <div class="font-black text-2xl mb-2 text-white">Tires &amp; Seasonal Changeovers</div>
+                <div class="text-white/70">Sales, mounting, balancing and expert winter/all-season changeovers.</div>
+            </div>
+            
+            <div class="service-card p-8 rounded-3xl group">
+                <div class="moving-icon accent-green text-4xl mb-5"><i class="fa-solid fa-oil-can"></i></div>
+                <div class="font-black text-2xl mb-2 text-white">Oil Changes &amp; Maintenance</div>
+                <div class="text-white/70">Full fluid services and preventive maintenance for cars, trucks &amp; work vehicles.</div>
+            </div>
+            
+            <div class="service-card p-8 rounded-3xl group">
+                <div class="moving-icon accent-green text-4xl mb-5"><i class="fa-solid fa-tools"></i></div>
+                <div class="font-black text-2xl mb-2 text-white">Brakes, Tune-Ups &amp; Repairs</div>
+                <div class="text-white/70">Complete brake service, diagnostics and mechanical repairs you can trust.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why BTC -->
+    <section id="why" class="bg-[#111827] py-16 border-y border-white/10">
+        <div class="max-w-5xl mx-auto px-8">
+            <div class="grid md:grid-cols-12 gap-x-12 items-center">
+                <div class="md:col-span-7">
+                    <div class="accent-green text-xs font-black tracking-[4px] mb-3">WHY LOCALS CHOOSE US</div>
+                    <h2 class="text-5xl font-black tracking-[-1.5px] leading-none mb-6 text-white">Better prices.<br>Better service.<br>Local people.</h2>
+                </div>
+                <div class="md:col-span-5 mt-8 md:mt-0 text-lg text-white/70">
+                    We keep our costs low so you pay less than the big tire shops — without ever compromising on quality or honesty. Whether it’s a quick oil change or a full mechanical job, we treat your vehicle like it’s our own.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop -->
+    <section id="work" class="max-w-7xl mx-auto px-8 py-20">
+        <div class="mb-10">
+            <div class="accent-green text-xs font-black tracking-[4px]">OUR SHOP</div>
+            <h3 class="text-5xl font-black tracking-tight text-white">Where the work gets done right</h3>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-4">
+            <div class="aspect-video rounded-3xl overflow-hidden border border-white/10"><img src="images/mechanic-with-van.png" class="w-full h-full object-cover"></div>
+            <div class="aspect-video rounded-3xl overflow-hidden border border-white/10 bg-[#111827] flex items-center justify-center p-8 text-center">
+                <div>
+                    <div class="text-3xl font-black mb-3 text-white">Modern shop.<br>Honest work.</div>
+                    <div class="text-white/70">Equipped for tires, brakes, diagnostics and full mechanical repairs on cars, trucks and work vehicles.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form -->
+    <section id="quote" class="max-w-2xl mx-auto px-8 pb-20">
+        <div class="text-center mb-8">
+            <div class="accent-green text-xs font-black tracking-[4px]">BOOK YOUR SERVICE</div>
+            <h2 class="text-4xl font-black tracking-tight text-white">Let’s get your vehicle sorted</h2>
+        </div>
+        
+        <form id="quote-form" class="bg-[#111827] border border-white/10 p-9 rounded-3xl space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <input type="text" placeholder="Your Name" required class="bg-[#0A0F1C] border border-white/10 px-5 py-3.5 rounded-2xl text-sm text-white">
+                <input type="tel" placeholder="Phone Number" required class="bg-[#0A0F1C] border border-white/10 px-5 py-3.5 rounded-2xl text-sm text-white">
+            </div>
+            <input type="email" placeholder="Email" class="bg-[#0A0F1C] border border-white/10 px-5 py-3.5 rounded-2xl text-sm w-full text-white">
+            
+            <select required class="bg-[#0A0F1C] border border-white/10 px-5 py-3.5 rounded-2xl text-sm w-full text-white">
+                <option value="">What do you need?</option>
+                <option>Tires / Seasonal Changeover</option>
+                <option>Oil Change &amp; Maintenance</option>
+                <option>Brakes or Tune-Up</option>
+                <option>General Mechanical / Diagnostics</option>
+                <option>Other</option>
+            </select>
+            
+            <textarea rows="3" placeholder="Vehicle details or concerns..." class="bg-[#0A0F1C] border border-white/10 px-5 py-3.5 rounded-3xl text-sm w-full text-white"></textarea>
+            
+            <button type="submit" class="main-cta w-full py-4 text-[#0A0F1C] font-black text-lg rounded-3xl">REQUEST SERVICE</button>
+        </form>
+    </section>
+
+    <footer class="bg-black text-white/60 py-8 text-sm border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-8 flex flex-col md:flex-row justify-between gap-y-4">
+            <div>BTC Auto Service • Kindersley, SK • (306) 860-7646</div>
+            <div class="font-bold accent-green">BETTER RATES. HONEST WORK. LOCAL EXPERTISE.</div>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('nav-scrolled', window.scrollY > 20);
+        });
+        
+        document.getElementById('quote-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            btn.innerHTML = 'SENDING...';
+            setTimeout(() => {
+                this.reset();
+                btn.innerHTML = 'REQUEST SENT — WE\'LL CALL YOU';
+                setTimeout(() => btn.innerHTML = 'REQUEST SERVICE', 2200);
+            }, 1100);
+        });
+    </script>
+</body>
+</html>

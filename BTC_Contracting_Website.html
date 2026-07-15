@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Trarback Contracting • Honest Work. Exceptional Craft.</title>
+    <meta name="description" content="Honest work. Exceptional craft. For our community. Premium roofing, eavestrough, soffit, fascia, windows, overhead doors and renovations in Kindersley, SK.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@700&amp;display=swap');
+        
+        body { font-family: 'Inter', system_ui, sans-serif; background: #0A0F1C; color: #E2E8F0; }
+        .display-font { font-family: 'Space Grotesk', system_ui, sans-serif; font-weight: 700; letter-spacing: -0.04em; }
+        
+        .hero {
+            background: linear-gradient(rgba(10,15,28,0.92), rgba(10,15,28,0.82));
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .nav-scrolled {
+            background: rgba(10,15,28,0.95);
+            backdrop-filter: blur(20px);
+        }
+        
+        .main-cta {
+            background: #A3E635;
+            color: #0A0F1C;
+            font-weight: 900;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+            transition: all 0.2s ease;
+        }
+        
+        .main-cta:hover {
+            background: #BEF264;
+            transform: translateY(-2px);
+        }
+        
+        .premium-card {
+            background: #111827;
+            border: 1px solid #1F2937;
+            transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease;
+        }
+        
+        .premium-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+        
+        .section-title {
+            font-size: 3.4rem;
+            line-height: 0.95;
+            letter-spacing: -0.045em;
+        }
+        
+        .logo-hype {
+            transition: transform 0.5s cubic-bezier(0.34,1.56,0.64,1);
+        }
+        
+        .logo-hype:hover {
+            transform: scale(1.08);
+        }
+        
+        .moving-icon {
+            transition: transform 0.6s cubic-bezier(0.34,1.56,0.64,1);
+        }
+        
+        .service-pill:hover .moving-icon {
+            transform: scale(1.15) rotate(8deg);
+        }
+        
+        .accent-green { color: #A3E635; }
+    </style>
+</head>
+<body>
+    <!-- Nav -->
+    <nav id="nav" class="sticky top-0 z-50 border-b border-white/10 transition-all">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-x-4">
+                    <div onclick="window.scrollTo({top:0, behavior:'smooth'})" class="logo-hype w-14 h-14 bg-black rounded-3xl flex items-center justify-center shadow-xl border border-white/10 cursor-pointer">
+                        <span class="text-white font-black text-[32px] tracking-[-3px]">BTC</span>
+                    </div>
+                    <div>
+                        <div class="font-black text-2xl tracking-[-1px] text-white">Bill Trarback Contracting</div>
+                        <div class="text-[10px] accent-green -mt-1 tracking-[2.5px] font-black">HONEST WORK. EXCEPTIONAL CRAFT.</div>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-bold text-white/80">
+                    <a href="#services" class="hover:text-white transition">Services</a>
+                    <a href="#craft" class="hover:text-white transition">Our Craft</a>
+                    <a href="#work" class="hover:text-white transition">Work</a>
+                </div>
+                
+                <div class="flex items-center gap-x-3">
+                    <a href="tel:3068607646" class="px-6 py-3 border border-white/20 hover:border-white/40 rounded-2xl text-sm font-bold flex items-center gap-x-2 transition text-white">
+                        <i class="fa-solid fa-phone accent-green"></i>
+                        <span>(306) 860-7646</span>
+                    </a>
+                    <a href="#quote" class="main-cta px-8 py-3.5 text-[#0A0F1C] text-sm font-black rounded-3xl flex items-center gap-x-2">
+                        GET A QUOTE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero min-h-[100dvh] flex items-center text-white relative">
+        <div class="max-w-5xl mx-auto px-8 pt-12 pb-20">
+            <div class="max-w-4xl">
+                <div class="inline-flex items-center gap-x-2 px-6 py-2 bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl mb-8 text-sm font-bold">
+                    KINDERSLEY, SASKATCHEWAN
+                </div>
+                
+                <h1 class="text-[68px] md:text-[84px] leading-[0.9] font-black tracking-[-5px] mb-6 text-white">
+                    Honest work.<br>
+                    Exceptional craft.<br>
+                    <span class="accent-green">For our community.</span>
+                </h1>
+                
+                <p class="max-w-lg text-2xl text-white/80 mb-10 tracking-tight">
+                    Roofing • Eavestrough • Soffit • Fascia • Windows • Overhead Doors • Renovations
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#quote" class="main-cta inline-flex items-center justify-center gap-x-3 px-10 py-5 font-black text-2xl rounded-3xl transition-all">
+                        GET A QUOTE
+                    </a>
+                    <a href="tel:3068607646" class="inline-flex items-center justify-center gap-x-3 px-9 py-5 border-2 border-white/40 hover:bg-white/10 rounded-3xl text-xl font-bold transition-all text-white">
+                        CALL (306) 860-7646
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <div class="bg-[#111827] border-b border-white/10 py-5">
+        <div class="max-w-6xl mx-auto px-8 flex flex-wrap justify-center md:justify-between items-center gap-x-8 text-sm font-bold text-white/70">
+            <div class="flex items-center gap-x-2"><i class="fa-solid fa-shield-halved accent-green"></i> <span>Local • Professional • Trusted</span></div>
+            <div class="flex items-center gap-x-2"><i class="fa-solid fa-check-double accent-green"></i> <span>Honest work. Exceptional craft.</span></div>
+            <div class="flex items-center gap-x-2"><i class="fa-solid fa-users accent-green"></i> <span>Highly recommended by Kindersley families</span></div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <section id="services" class="max-w-7xl mx-auto px-8 py-20">
+        <div class="text-center mb-14">
+            <div class="accent-green text-xs font-black tracking-[4px]">EXPERTISE</div>
+            <h2 class="section-title font-black tracking-[-2px] text-white">Quality work.<br>Every single time.</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="premium-card service-pill p-8 rounded-3xl group">
+                <div class="moving-icon accent-green text-4xl mb-5"><i class="fa-solid fa-home"></i></div>
+                <div class="font-black text-2xl mb-3 text-white">Roofing</div>
+                <div class="text-white/70">Shingles, metal, repairs and full replacements built for prairie weather.</div>
+            </div>
+            
+            <div class="premium-card service-pill p-8 rounded-3xl group">
+                <div class="moving-icon accent-green text-4xl mb-5"><i class="fa-solid fa-water"></i></div>
+                <div class="font-black text-2xl mb-3 text-white">Eavestrough &amp; Fascia</div>
+                <div class="text-white/70">Seamless eavestrough systems and fascia work — clean, durable, and properly installed.</div>
+            </div>
+            
+            <div class="premium-card service-pill p-8 rounded-3xl group">
+                <div class="moving-icon accent-green text-4xl mb-5"><i class="fa-solid fa-wrench"></i></div>
+                <div class="font-black text-2xl mb-3 text-white">Soffit, Fascia &amp; Exterior</div>
+                <div class="text-white/70">Complete exterior protection and beautification for your home.</div>
+            </div>
+            
+            <div class="premium-card service-pill p-8 rounded-3xl group">
+                <div class="moving-icon accent-green text-4xl mb-5"><i class="fa-solid fa-window-maximize"></i></div>
+                <div class="font-black text-2xl mb-3 text-white">Windows &amp; Doors</div>
+                <div class="text-white/70">New installations and replacements with excellent energy efficiency.</div>
+            </div>
+            
+            <div class="premium-card service-pill p-8 rounded-3xl group">
+                <div class="moving-icon accent-green text-4xl mb-5"><i class="fa-solid fa-car"></i></div>
+                <div class="font-black text-2xl mb-3 text-white">Overhead &amp; Garage Doors</div>
+                <div class="text-white/70">Sales, installation and repair of overhead doors and garage door systems.</div>
+            </div>
+            
+            <div class="premium-card service-pill p-8 rounded-3xl group">
+                <div class="moving-icon accent-green text-4xl mb-5"><i class="fa-solid fa-hammer"></i></div>
+                <div class="font-black text-2xl mb-3 text-white">Interior &amp; Exterior Renovations</div>
+                <div class="text-white/70">Full renovations and custom work — big or small, we handle it.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Craft -->
+    <section id="craft" class="bg-[#111827] py-16 border-y border-white/10">
+        <div class="max-w-5xl mx-auto px-8">
+            <div class="grid md:grid-cols-12 gap-x-12 items-center">
+                <div class="md:col-span-7">
+                    <div class="accent-green text-xs font-black tracking-[4px] mb-3">OUR STANDARD</div>
+                    <h2 class="text-6xl font-black tracking-[-2.5px] leading-none mb-6 text-white">We show up.<br>We do it right.<br>We stand behind it.</h2>
+                </div>
+                <div class="md:col-span-5 mt-8 md:mt-0 text-lg text-white/70">
+                    Bill Trarback Contracting was built on one simple promise: honest work and exceptional craft. Quality materials. Skilled crews. Clear communication. That's how we've earned the trust of Kindersley.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Gallery -->
+    <section id="work" class="max-w-7xl mx-auto px-8 py-20">
+        <div class="mb-10">
+            <div class="accent-green text-xs font-black tracking-[4px]">REAL WORK</div>
+            <h3 class="text-5xl font-black tracking-tight text-white">Projects we're proud of</h3>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="aspect-[16/10] rounded-3xl overflow-hidden border border-white/10"><img src="images/deck-black-railing.png" class="w-full h-full object-cover"></div>
+            <div class="aspect-[16/10] rounded-3xl overflow-hidden border border-white/10"><img src="images/deck-white-railing.png" class="w-full h-full object-cover"></div>
+            <div class="aspect-[16/10] rounded-3xl overflow-hidden border border-white/10"><img src="imagine_images/rTlyX.jpg" class="w-full h-full object-cover"></div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="bg-[#111827] border-y border-white/10 py-16">
+        <div class="max-w-5xl mx-auto px-8">
+            <div class="text-center mb-10">
+                <div class="accent-green text-xs font-black tracking-[4px]">COMMUNITY VOICES</div>
+                <h3 class="text-4xl font-black tracking-tight text-white">What our neighbors say</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-[#0A0F1C] p-8 rounded-3xl border border-white/10">
+                    <div class="flex accent-green text-xl mb-4">★★★★★</div>
+                    <p class="text-sm text-white/80">"Incredible teamwork! Removed chimney, rebuilt roof, insulated and shingled in 30 hours. Professional all the way."</p>
+                    <div class="mt-6 text-xs font-bold text-white">— Irene Forgie</div>
+                </div>
+                <div class="bg-[#0A0F1C] p-8 rounded-3xl border border-white/10">
+                    <div class="flex accent-green text-xl mb-4">★★★★★</div>
+                    <p class="text-sm text-white/80">"Bill came to our football locker room and installed eavestroughs the next day. Thank you for your generosity!"</p>
+                    <div class="mt-6 text-xs font-bold text-white">— Local customer</div>
+                </div>
+                <div class="bg-[#0A0F1C] p-8 rounded-3xl border border-white/10">
+                    <div class="flex accent-green text-xl mb-4">★★★★★</div>
+                    <p class="text-sm text-white/80">"Thank you for the great job on our roof! Highly recommend them for any job."</p>
+                    <div class="mt-6 text-xs font-bold text-white">— Antoinette Esterhuizen</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Form -->
+    <section id="quote" class="max-w-2xl mx-auto px-8 py-20">
+        <div class="text-center mb-8">
+            <div class="accent-green text-xs font-black tracking-[4px]">LET'S TALK</div>
+            <h2 class="text-4xl font-black tracking-tight text-white">Tell us about your project</h2>
+        </div>
+        
+        <form id="quote-form" class="bg-[#111827] border border-white/10 p-9 rounded-3xl space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <input type="text" placeholder="Your Name" required class="bg-[#0A0F1C] border border-white/10 px-5 py-3.5 rounded-2xl text-sm text-white">
+                <input type="tel" placeholder="Phone Number" required class="bg-[#0A0F1C] border border-white/10 px-5 py-3.5 rounded-2xl text-sm text-white">
+            </div>
+            <input type="email" placeholder="Email Address" class="bg-[#0A0F1C] border border-white/10 px-5 py-3.5 rounded-2xl text-sm w-full text-white">
+            
+            <select required class="bg-[#0A0F1C] border border-white/10 px-5 py-3.5 rounded-2xl text-sm w-full text-white">
+                <option value="">What service do you need?</option>
+                <option>Roofing</option>
+                <option>Eavestrough / Fascia / Soffit</option>
+                <option>Windows or Doors</option>
+                <option>Overhead Doors</option>
+                <option>Full Renovation</option>
+                <option>Other</option>
+            </select>
+            
+            <textarea rows="4" placeholder="Tell us more about your project..." class="bg-[#0A0F1C] border border-white/10 px-5 py-3.5 rounded-3xl text-sm w-full text-white"></textarea>
+            
+            <button type="submit" class="main-cta w-full py-4 text-[#0A0F1C] font-black text-lg rounded-3xl">SEND TO BILL TRARBACK</button>
+        </form>
+    </section>
+
+    <footer class="bg-black text-white/60 py-9 text-sm border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-8 flex flex-col md:flex-row justify-between gap-y-4">
+            <div>Bill Trarback Contracting • Kindersley, SK • (306) 860-7646</div>
+            <div class="font-bold accent-green">HONEST WORK. EXCEPTIONAL CRAFT. FOR OUR COMMUNITY.</div>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('nav-scrolled', window.scrollY > 20);
+        });
+        
+        document.getElementById('quote-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            btn.innerHTML = 'SENDING...';
+            setTimeout(() => {
+                this.reset();
+                btn.innerHTML = 'THANK YOU — BILL WILL CALL YOU';
+                setTimeout(() => btn.innerHTML = 'SEND TO BILL TRARBACK', 2200);
+            }, 1300);
+        });
+    </script>
+</body>
+</html>

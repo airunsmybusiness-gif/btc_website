@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTC • Kindersley | Auto Service &amp; Contracting</title>
+    <meta name="description" content="Premium local auto service, tires and thoughtful home contracting in Kindersley, Saskatchewan. Crafted with integrity.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+
+        :root {
+            --deep: #0F172A;
+            --warm: #C2410C;
+            --cream: #F8FAFC;
+        }
+
+        body {
+            font-family: 'Inter', system_ui, -apple-system, sans-serif;
+        }
+
+        .heading {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+            letter-spacing: -0.035em;
+        }
+
+        .premium-nav {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .premium-nav.scrolled {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 1px 0 rgba(15, 23, 42, 0.08);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(15, 23, 42, 0.68), rgba(15, 23, 42, 0.55)), url('./imagine_images/YNuSd.jpg');
+            background-size: cover;
+            background-position: center 35%;
+            background-attachment: fixed;
+        }
+
+        .section-title {
+            font-size: clamp(2.25rem, 5vw, 3.25rem);
+            line-height: 1.05;
+            letter-spacing: -0.03em;
+        }
+
+        .service-card {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.01);
+            box-shadow: 0 25px 50px -12px rgb(15 23 42 / 0.15);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #C2410C;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .wow-button {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .wow-button::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -100%;
+            width: 40%;
+            height: 200%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,0.4),
+                transparent
+            );
+            transition: 0.6s;
+        }
+        
+        .wow-button:hover::after {
+            left: 200%;
+        }
+
+        .premium-shadow {
+            box-shadow: 0 10px 15px -3px rgb(15 23 42 / 0.1), 
+                       0 4px 6px -4px rgb(15 23 42 / 0.1);
+        }
+
+        .elegant-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e2e8f0, transparent);
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .gallery-img {
+            transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                        box-shadow 0.3s ease;
+        }
+        
+        .gallery-img:hover {
+            transform: scale(1.015);
+            box-shadow: 0 20px 25px -5px rgb(15 23 42 / 0.1), 0 8px 10px -6px rgb(15 23 42 / 0.1);
+        }
+
+        .testimonial {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .form-input {
+            transition: all 0.2s ease;
+        }
+        
+        .form-input:focus {
+            border-color: #C2410C;
+            box-shadow: 0 0 0 4px rgba(194, 65, 12, 0.1);
+            outline: none;
+        }
+
+        .micro-hover {
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        
+        .micro-hover:hover {
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] text-slate-800 overflow-x-hidden">
+    <!-- Premium Navigation -->
+    <nav id="nav" class="premium-nav bg-white/95 sticky top-0 z-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-4">
+                    <div class="w-11 h-11 bg-[#0F172A] rounded-3xl flex items-center justify-center shadow-inner">
+                        <span class="text-white font-bold text-[27px] tracking-[-2px]">BTC</span>
+                    </div>
+                    <div class="leading-none">
+                        <div class="font-semibold text-2xl tracking-[-1px]">BTC</div>
+                        <div class="text-[10px] text-slate-500 -mt-1 tracking-[2px] font-medium">KINDERSLEY</div>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                    <a href="#services" class="nav-link text-slate-700 hover:text-[#C2410C]">Services</a>
+                    <a href="#craft" class="nav-link text-slate-700 hover:text-[#C2410C]">Our Craft</a>
+                    <a href="#gallery" class="nav-link text-slate-700 hover:text-[#C2410C]">Work</a>
+                    <a href="#voices" class="nav-link text-slate-700 hover:text-[#C2410C]">Voices</a>
+                </div>
+
+                <div class="flex items-center gap-x-4">
+                    <a href="#quote" 
+                       class="wow-button hidden sm:inline-flex items-center px-7 py-3.5 bg-[#0F172A] hover:bg-black text-white text-sm font-semibold rounded-3xl transition-all active:scale-[0.985]">
+                        Request a Quote
+                    </a>
+                    
+                    <a href="tel:3068607646" 
+                       class="flex items-center gap-x-2.5 px-5 py-3 text-sm font-medium border border-slate-200 hover:border-slate-300 rounded-3xl transition-all micro-hover">
+                        <i class="fa-solid fa-phone text-[#C2410C]"></i>
+                        <span class="hidden md:inline">Call Bill</span>
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-btn" 
+                            class="md:hidden w-11 h-11 flex items-center justify-center text-slate-600 hover:text-[#0F172A] hover:bg-slate-100 rounded-2xl transition-all">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Cinematic Hero -->
+    <section class="hero min-h-[100dvh] flex items-center text-white relative">
+        <div class="max-w-5xl mx-auto px-8 pt-12 pb-20 md:pt-16 md:pb-24 relative z-10">
+            <div class="max-w-4xl">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-x-2 px-5 py-2 bg-white/15 backdrop-blur-xl border border-white/20 rounded-3xl mb-8 text-sm font-medium">
+                    <div class="w-2 h-2 bg-[#C2410C] rounded-full animate-pulse"></div>
+                    <span>Kindersley, Saskatchewan • Est. local</span>
+                </div>
+
+                <h1 class="text-[64px] md:text-[82px] leading-[0.92] font-bold tracking-[-4.2px] heading mb-7">
+                    Honest work.<br>
+                    Exceptional craft.<br>
+                    <span class="text-[#C2410C]">For our community.</span>
+                </h1>
+
+                <p class="max-w-lg text-2xl md:text-[27px] text-white/90 tracking-[-0.3px] mb-10">
+                    Premium auto service, tires, and thoughtful home contracting — 
+                    delivered with the care and quality Kindersley deserves.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#quote" 
+                       class="wow-button group inline-flex items-center justify-center gap-x-3 px-9 py-5 bg-white text-[#0F172A] hover:bg-[#C2410C] hover:text-white font-semibold text-xl rounded-3xl transition-all active:scale-[0.985]">
+                        <span>Start Your Project</span>
+                        <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    
+                    <a href="#services" 
+                       class="inline-flex items-center justify-center gap-x-3 px-8 py-5 border-2 border-white/60 hover:bg-white/10 hover:border-white text-lg font-medium rounded-3xl transition-all">
+                        Explore Our Work
+                    </a>
+                </div>
+
+                <div class="mt-10 flex items-center gap-x-4 text-sm text-white/70">
+                    <div class="flex -space-x-2">
+                        <div class="w-7 h-7 rounded-full border-[1.5px] border-white/50 overflow-hidden"><img src="https://i.pravatar.cc/28?img=32" class="w-full h-full object-cover"></div>
+                        <div class="w-7 h-7 rounded-full border-[1.5px] border-white/50 overflow-hidden"><img src="https://i.pravatar.cc/28?img=47" class="w-full h-full object-cover"></div>
+                        <div class="w-7 h-7 rounded-full border-[1.5px] border-white/50 overflow-hidden"><img src="https://i.pravatar.cc/28?img=28" class="w-full h-full object-cover"></div>
+                    </div>
+                    <span>Trusted by families &amp; businesses across West Central SK</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-12 left-1/2 -translate-x-1/2 hidden md:block">
+            <div class="flex flex-col items-center text-white/50 text-xs tracking-[3px]">
+                SCROLL TO DISCOVER
+                <i class="fa-solid fa-chevron-down mt-2 text-lg animate-bounce"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust / Stats -->
+    <div class="bg-white border-b border-slate-100 py-6">
+        <div class="max-w-6xl mx-auto px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-6 text-center md:text-left">
+                <div>
+                    <div class="text-4xl font-semibold text-[#0F172A] stat-number" data-target="5.0">5.0</div>
+                    <div class="text-xs text-slate-500 tracking-widest mt-1">GOOGLE RATING</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-semibold text-[#0F172A] stat-number" data-target="100">100</div>
+                    <div class="text-xs text-slate-500 tracking-widest mt-1">JOBS COMPLETED</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-semibold text-[#0F172A]">Local</div>
+                    <div class="text-xs text-slate-500 tracking-widest mt-1">ROOTED IN KINDERSLEY</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-semibold text-[#0F172A]">Since</div>
+                    <div class="text-xs text-slate-500 tracking-widest mt-1">THE BEGINNING</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <section id="services" class="max-w-7xl mx-auto px-8 py-20">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-y-4 mb-12">
+            <div>
+                <div class="text-[#C2410C] text-xs font-bold tracking-[3px]">EXPERTISE</div>
+                <h2 class="section-title heading font-bold tracking-tight text-[#0F172A]">Services built for Saskatchewan life</h2>
+            </div>
+            <a href="#quote" class="text-sm font-semibold text-[#C2410C] hover:text-[#9F3410] flex items-center gap-x-2 micro-hover">
+                LET’S DISCUSS YOUR NEEDS <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+            <!-- Auto Card -->
+            <div class="service-card group bg-white border border-slate-200 rounded-3xl p-9 premium-shadow">
+                <div class="flex items-start justify-between mb-8">
+                    <div>
+                        <div class="w-14 h-14 bg-[#0F172A] text-white rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-car text-[32px]"></i>
+                        </div>
+                        <div class="font-semibold text-3xl tracking-tight">Auto Service &amp; Tires</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-xs text-emerald-600 font-bold tracking-widest">MOST REQUESTED</div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 gap-y-5 text-[15px]">
+                    <div class="flex items-start gap-x-4">
+                        <i class="fa-solid fa-check text-emerald-600 mt-1 flex-shrink-0"></i>
+                        <div><span class="font-medium">Tire Sales, Mounting &amp; Balancing</span> — Winter, all-season &amp; commercial</div>
+                    </div>
+                    <div class="flex items-start gap-x-4">
+                        <i class="fa-solid fa-check text-emerald-600 mt-1 flex-shrink-0"></i>
+                        <div><span class="font-medium">Oil Changes &amp; Preventive Maintenance</span></div>
+                    </div>
+                    <div class="flex items-start gap-x-4">
+                        <i class="fa-solid fa-check text-emerald-600 mt-1 flex-shrink-0"></i>
+                        <div><span class="font-medium">Brakes • Tune-Ups • Diagnostics • Repairs</span></div>
+                    </div>
+                    <div class="flex items-start gap-x-4">
+                        <i class="fa-solid fa-check text-emerald-600 mt-1 flex-shrink-0"></i>
+                        <div>Work trucks, pickups &amp; family vehicles</div>
+                    </div>
+                </div>
+                
+                <div class="mt-8 pt-6 border-t text-sm flex items-center gap-x-2 text-emerald-700">
+                    <i class="fa-solid fa-clock"></i>
+                    <span class="font-medium">Often same or next-day availability</span>
+                </div>
+            </div>
+
+            <!-- Contracting Card -->
+            <div class="service-card group bg-white border border-slate-200 rounded-3xl p-9 premium-shadow">
+                <div class="flex items-start justify-between mb-8">
+                    <div>
+                        <div class="w-14 h-14 bg-[#C2410C] text-white rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-hammer text-[32px]"></i>
+                        </div>
+                        <div class="font-semibold text-3xl tracking-tight">Home Contracting &amp; Craft</div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 gap-y-5 text-[15px]">
+                    <div class="flex items-start gap-x-4">
+                        <i class="fa-solid fa-check text-emerald-600 mt-1 flex-shrink-0"></i>
+                        <div><span class="font-medium">Custom Decks &amp; Outdoor Living</span> — Built for our seasons</div>
+                    </div>
+                    <div class="flex items-start gap-x-4">
+                        <i class="fa-solid fa-check text-emerald-600 mt-1 flex-shrink-0"></i>
+                        <div><span class="font-medium">Home Renovations &amp; Upgrades</span></div>
+                    </div>
+                    <div class="flex items-start gap-x-4">
+                        <i class="fa-solid fa-check text-emerald-600 mt-1 flex-shrink-0"></i>
+                        <div><span class="font-medium">General Repairs &amp; Property Care</span></div>
+                    </div>
+                    <div class="flex items-start gap-x-4">
+                        <i class="fa-solid fa-check text-emerald-600 mt-1 flex-shrink-0"></i>
+                        <div>Thoughtful craftsmanship that lasts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Craft -->
+    <section id="craft" class="bg-[#0F172A] text-white py-20">
+        <div class="max-w-5xl mx-auto px-8">
+            <div class="grid md:grid-cols-12 gap-x-12 items-center">
+                <div class="md:col-span-7">
+                    <div class="text-[#C2410C] text-xs font-bold tracking-[3px] mb-3">THE BTC STANDARD</div>
+                    <h2 class="section-title heading tracking-tight mb-6">We don’t just fix things.<br>We care for what matters to you.</h2>
+                    
+                    <div class="max-w-prose text-[15.5px] text-white/80 leading-relaxed space-y-5">
+                        <p>BTC exists because good work and good relationships still matter in small towns. We treat every vehicle and every home with the respect they deserve — because they belong to our neighbors.</p>
+                        <p>Lower overhead means better prices for you. Higher standards mean work that lasts through Saskatchewan winters and busy seasons.</p>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-5 mt-10 md:mt-0">
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-9 text-sm">
+                        <div class="font-semibold text-[#C2410C] tracking-widest text-xs mb-4">WHAT YOU CAN EXPECT</div>
+                        <ul class="space-y-3.5 text-white/90">
+                            <li class="flex gap-x-3"><span class="text-[#C2410C]">→</span> Transparent, upfront pricing</li>
+                            <li class="flex gap-x-3"><span class="text-[#C2410C]">→</span> Clear communication every step</li>
+                            <li class="flex gap-x-3"><span class="text-[#C2410C]">→</span> Quality that stands behind the work</li>
+                            <li class="flex gap-x-3"><span class="text-[#C2410C]">→</span> Respect for your time and property</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="max-w-7xl mx-auto px-8 py-20">
+        <div class="mb-10 flex items-end justify-between">
+            <div>
+                <div class="text-[#C2410C] text-xs font-bold tracking-[3px]">THE CRAFT IN ACTION</div>
+                <h3 class="section-title heading font-bold tracking-tight">Real work. Real places.</h3>
+            </div>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-4">
+            <div onclick="showLightbox(this)" class="cursor-pointer overflow-hidden rounded-3xl border border-slate-200 aspect-[16/10] relative group">
+                <img src="./imagine_images/YNuSd.jpg" class="gallery-img w-full h-full object-cover" alt="BTC shop and trucks at golden hour on the prairie">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/10 to-black/40 opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+                    <div class="text-white text-sm font-medium">Our shop • Prairie golden hour</div>
+                </div>
+            </div>
+            
+            <div onclick="showLightbox(this)" class="cursor-pointer overflow-hidden rounded-3xl border border-slate-200 aspect-[16/10] relative group">
+                <img src="./imagine_images/0zeVj.jpg" class="gallery-img w-full h-full object-cover" alt="Hands-on work in the shop">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/10 to-black/40 opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+                    <div class="text-white text-sm font-medium">Dedicated craftsmanship</div>
+                </div>
+            </div>
+            
+            <div onclick="showLightbox(this)" class="cursor-pointer overflow-hidden rounded-3xl border border-slate-200 aspect-[16/10] relative group">
+                <img src="./imagine_images/65lcF.jpg" class="gallery-img w-full h-full object-cover" alt="Custom deck at sunset">
+                <div class="absolute inset-0 bg-gradient-to-b from-black/10 to-black/40 opacity-0 group-hover:opacity-100 transition-all flex items-end p-6">
+                    <div class="text-white text-sm font-medium">Outdoor spaces built to last</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="voices" class="bg-white border-y border-slate-100 py-16">
+        <div class="max-w-5xl mx-auto px-8">
+            <div class="text-center mb-10">
+                <div class="text-[#C2410C] text-xs font-bold tracking-[3px]">COMMUNITY VOICES</div>
+                <h3 class="section-title heading font-bold tracking-tight">What our neighbors say</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="testimonial bg-[#F8FAFC] p-8 rounded-3xl border border-slate-200">
+                    <div class="flex text-[#C2410C] text-xl mb-5">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-lg leading-snug tracking-tight">“Excellent service and noticeably better rates than other shops in town. A true local gem that deserves more recognition.”</p>
+                    <div class="mt-7 text-sm font-medium">— Lilibeth S., Kindersley area resident</div>
+                </div>
+                
+                <div class="testimonial bg-[#F8FAFC] p-8 rounded-3xl border border-slate-200">
+                    <div class="flex text-[#C2410C] text-xl mb-5">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-lg leading-snug tracking-tight">“Solid, honest work at fair prices. They explained everything clearly and didn’t try to upsell. Will definitely use them again and recommend to friends.”</p>
+                    <div class="mt-7 text-sm font-medium">— Local farmer &amp; truck owner</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Opportunity -->
+    <section class="max-w-5xl mx-auto px-8 py-16">
+        <div class="text-center max-w-2xl mx-auto">
+            <div class="text-[#C2410C] text-xs font-bold tracking-[3px] mb-2">THE DIFFERENCE A GREAT ONLINE PRESENCE MAKES</div>
+            <h3 class="section-title heading font-bold tracking-tight mb-4">Your work deserves to be seen.</h3>
+            <p class="text-lg text-slate-600">This site is an example of the level of clarity, beauty, and professionalism your business can have online — so more neighbors discover the quality you already deliver every day.</p>
+        </div>
+    </section>
+
+    <!-- Quote Form -->
+    <section id="quote" class="max-w-2xl mx-auto px-8 pb-20">
+        <div class="bg-white border border-slate-200 p-9 md:p-11 rounded-3xl premium-shadow">
+            <div class="text-center mb-8">
+                <div class="text-[#C2410C] text-xs font-bold tracking-[3px]">LET’S BEGIN</div>
+                <h2 class="text-3xl font-semibold tracking-tight">Tell us about your project</h2>
+            </div>
+            
+            <form id="quote-form" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5 tracking-wider">YOUR NAME</label>
+                        <input type="text" id="name" required class="form-input w-full border border-slate-200 px-5 py-3.5 rounded-2xl text-sm" placeholder="Full name">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5 tracking-wider">PHONE NUMBER</label>
+                        <input type="tel" id="phone" required class="form-input w-full border border-slate-200 px-5 py-3.5 rounded-2xl text-sm" placeholder="(306) XXX-XXXX">
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1.5 tracking-wider">EMAIL</label>
+                    <input type="email" id="email" class="form-input w-full border border-slate-200 px-5 py-3.5 rounded-2xl text-sm" placeholder="you@email.com">
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5 tracking-wider">SERVICE NEEDED</label>
+                        <select id="service" required class="form-input w-full border border-slate-200 px-5 py-3.5 rounded-2xl text-sm bg-white">
+                            <option value="">Select service</option>
+                            <option value="Tires / Seasonal Changeover">Tires / Seasonal Changeover</option>
+                            <option value="Oil Change or Maintenance">Oil Change or Maintenance</option>
+                            <option value="Brakes, Tune-Up or Repair">Brakes, Tune-Up or Repair</option>
+                            <option value="General Auto Work">General Auto / Diagnostics</option>
+                            <option value="Custom Deck or Outdoor Project">Custom Deck or Outdoor Project</option>
+                            <option value="Home Renovation or Repair">Home Renovation or Repair</option>
+                            <option value="Other">Other — describe below</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-600 mb-1.5 tracking-wider">PREFERRED TIMING</label>
+                        <select id="timing" class="form-input w-full border border-slate-200 px-5 py-3.5 rounded-2xl text-sm bg-white">
+                            <option value="As soon as possible">As soon as possible</option>
+                            <option value="Within the next 1-2 weeks">Within the next 1-2 weeks</option>
+                            <option value="This month">This month</option>
+                            <option value="Just a quote for now">Just a quote for now</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div>
+                    <label class="block text-xs font-semibold text-slate-600 mb-1.5 tracking-wider">PROJECT DETAILS</label>
+                    <textarea id="message" rows="4" class="form-input w-full border border-slate-200 px-5 py-3.5 rounded-3xl text-sm resize-y" placeholder="Vehicle details, project scope, or any specific needs..."></textarea>
+                </div>
+                
+                <button type="submit" 
+                        class="wow-button w-full py-[17px] bg-[#0F172A] hover:bg-black text-white font-semibold text-lg rounded-3xl transition-all flex items-center justify-center gap-x-3">
+                    <span>Send to the BTC Team</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <div class="bg-[#0F172A] text-white py-14">
+        <div class="max-w-xl mx-auto px-8 text-center">
+            <h3 class="text-3xl font-semibold tracking-tight">We’re ready when you are.</h3>
+            <p class="mt-3 text-white/70">Call Bill directly or send us a message. We’ll take it from there.</p>
+            
+            <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:3068607646" class="px-8 py-4 border border-white/30 hover:bg-white/5 rounded-3xl font-medium transition micro-hover">Call Bill • 306-860-7646</a>
+                <a href="#quote" class="px-8 py-4 bg-white text-[#0F172A] font-semibold rounded-3xl hover:bg-[#C2410C] hover:text-white transition micro-hover">Send a Message</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-100 py-9 text-sm">
+        <div class="max-w-6xl mx-auto px-8 flex flex-col md:flex-row justify-between gap-y-6 text-slate-600">
+            <div>
+                <div class="font-semibold text-[#0F172A]">BTC Auto Service &amp; Contracting</div>
+                <div class="mt-1 text-xs">1107 9 St W, Kindersley, Saskatchewan</div>
+            </div>
+            <div class="text-xs md:text-right max-w-[260px] leading-relaxed">
+                Honest work. Exceptional craft.<br>
+                Proudly serving Kindersley and West Central Saskatchewan.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" onclick="hideLightbox()" class="hidden fixed inset-0 bg-black/90 z-[300] flex items-center justify-center p-6">
+        <div onclick="event.stopImmediatePropagation()" class="max-w-5xl w-full">
+            <img id="lightbox-img" class="max-h-[85vh] w-auto mx-auto rounded-2xl shadow-2xl" alt="">
+            <div class="text-center mt-4">
+                <button onclick="hideLightbox()" class="text-white/70 hover:text-white text-sm tracking-widest">CLOSE PREVIEW</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="success-modal" onclick="if (event.target.id === 'success-modal') hideSuccess()" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[300] p-6">
+        <div onclick="event.stopImmediatePropagation()" class="bg-white w-full max-w-md rounded-3xl p-9 text-center">
+            <div class="mx-auto w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
+                <i class="fa-solid fa-check-double text-emerald-600 text-[42px]"></i>
+            </div>
+            <h3 class="text-2xl font-semibold tracking-tight">Thank you. We’ve got it.</h3>
+            <p class="mt-3 text-slate-600">Bill or a member of the team will reach out shortly.</p>
+            <button onclick="hideSuccess()" class="mt-7 w-full py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-2xl transition">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Navbar scroll effect
+        function initNav() {
+            const nav = document.getElementById('nav');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 30) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            });
+        }
+
+        // Animated stats
+        function animateStats() {
+            const stats = document.querySelectorAll('.stat-number');
+            
+            stats.forEach(stat => {
+                const target = parseFloat(stat.getAttribute('data-target'));
+                if (isNaN(target)) return;
+                
+                let current = 0;
+                const increment = target / 60;
+                const duration = 1400;
+                const startTime = performance.now();
+                
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    
+                    current = target * progress;
+                    
+                    if (target === 5.0) {
+                        stat.textContent = current.toFixed(1);
+                    } else {
+                        stat.textContent = Math.floor(current);
+                    }
+                    
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        if (target === 5.0) stat.textContent = '5.0';
+                        else stat.textContent = target;
+                    }
+                }
+                
+                requestAnimationFrame(update);
+            });
+        }
+
+        // Premium Form
+        function initForm() {
+            const form = document.getElementById('quote-form');
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const btn = form.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                
+                btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin mr-3"></i> Sending...`;
+                btn.disabled = true;
+                
+                setTimeout(() => {
+                    form.reset();
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                    
+                    const modal = document.getElementById('success-modal');
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex');
+                }, 1250);
+            });
+        }
+
+        function hideSuccess() {
+            const modal = document.getElementById('success-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        // Gallery Lightbox
+        function showLightbox(element) {
+            const img = element.querySelector('img');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            lightboxImg.src = img.src;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        function hideLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('flex');
+            lightbox.classList.add('hidden');
+        }
+
+        // Mobile Menu
+        function initMobileMenu() {
+            const btn = document.getElementById('mobile-btn');
+            
+            btn.addEventListener('click', () => {
+                const menuHTML = `
+                    <div class="fixed inset-0 bg-black/90 z-[400] md:hidden" id="mobile-menu">
+                        <div class="bg-white w-[78%] h-full p-8 flex flex-col">
+                            <div class="flex justify-between items-center mb-12">
+                                <div class="flex items-center gap-x-3">
+                                    <div class="w-9 h-9 bg-[#0F172A] rounded-2xl flex items-center justify-center">
+                                        <span class="text-white font-bold text-2xl tracking-[-1.5px]">BTC</span>
+                                    </div>
+                                    <span class="font-semibold text-xl">BTC Kindersley</span>
+                                </div>
+                                <button class="text-4xl text-slate-300" onclick="document.getElementById('mobile-menu').remove()">&times;</button>
+                            </div>
+                            
+                            <div class="flex flex-col gap-y-1 text-xl font-medium">
+                                <a href="#services" class="py-4 border-b border-slate-100" onclick="document.getElementById('mobile-menu').remove()">Services</a>
+                                <a href="#craft" class="py-4 border-b border-slate-100" onclick="document.getElementById('mobile-menu').remove()">Our Craft</a>
+                                <a href="#gallery" class="py-4 border-b border-slate-100" onclick="document.getElementById('mobile-menu').remove()">Work</a>
+                                <a href="#voices" class="py-4 border-b border-slate-100" onclick="document.getElementById('mobile-menu').remove()">Voices</a>
+                                
+                                <a href="#quote" class="mt-8 py-4 bg-[#0F172A] text-white text-center rounded-3xl font-semibold" onclick="document.getElementById('mobile-menu').remove()">Request a Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                document.body.insertAdjacentHTML('beforeend', menuHTML);
+            });
+        }
+
+        // Smooth scroll
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        const offset = 80;
+                        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({ top, behavior: 'smooth' });
+                    }
+                });
+            });
+        }
+
+        // Keyboard support
+        function initKeyboard() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const lightbox = document.getElementById('lightbox');
+                    const success = document.getElementById('success-modal');
+                    
+                    if (!lightbox.classList.contains('hidden')) hideLightbox();
+                    else if (!success.classList.contains('hidden')) hideSuccess();
+                }
+            });
+        }
+
+        // Initialize everything
+        function init() {
+            initNav();
+            animateStats();
+            initForm();
+            initMobileMenu();
+            initSmoothScroll();
+            initKeyboard();
+            
+            console.log('%c[Senior Design] Premium BTC website initialized with wow factor.', 'color:#64748b; font-size:9px');
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
